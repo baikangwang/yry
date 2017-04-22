@@ -113,3 +113,5 @@ xm,1=张书豪
 yx,1=mer_mer_cha@163.com
 ;验证码
 yzm,1=7948
+;清除timer
+cc,1=clearInterval(timer); window.location_time(1492842720999);
