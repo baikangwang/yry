@@ -9,3 +9,5 @@ http://19y.tjnkyey.cn/
 12010519851207032X
 13820563693
 13820563693
+
+clearInterval(timer);window.location_time(1492941600999);
