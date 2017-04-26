@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>河西区幼儿园网上报名系统</title>
+    <script type="text/javascript" src="./js/jquery-1.12.1.min.js">
+    </script>
+    <script type="text/javascript" src="./js/commonFunction.js">
+    </script>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="bookmark" href="./favicon.ico" type="image/x-icon" />
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div class="rms_body" style="">
+        <div id="top" class="header_top" style="">
+            <div style="text-align:left;width:98%;margin-left:0px">
+                <table style="height:120px;">
+                    <tr>
+                        <td> </td>
+                        <td style="color:rgb(73,207,177);font-family:inherit;font-weight:inherit;height:20px"> <img id="id_title_img" style="margin-top:10px" src="" alt="" /> </td>
+                        <td style="white-space:nowrap;"> <span style="font-size:28px;width:1px;color:rgb(204,204,204);font-family:inherit;font-weight:inherit;">|</span> <span style="width:16%;font-size:24px;color:rgb(102,102,102);font-family:inherit;font-weight:inherit" id="id_title_name"></span>                            </td>
+                        <td> </td>
+                        <td>
+                            <table id="content" style="height:40px;border:0px;">
+                                <tr>
+                                    <td>
+                                        <li id="id_li_step1" class="steps steps-active"> <span>1</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_step2" class="steps steps-noactive"> <span>2</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_step3" class="steps steps-noactive"> <span>3</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_step4" class="steps steps-noactive"> <span>4</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_step5" class="steps steps-noactive"> <span>5</span> </li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <li id="id_li_text_step1" class="steps-text steps-text-active"> <span>登录/注册账号</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_text_step2" class="steps-text"> <span>选择幼儿园</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_text_step3" class="steps-text"> <span>填写报名表</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_text_step4" class="steps-text"> <span>提交申请</span> </li>
+                                    </td>
+                                    <td>
+                                        <li id="id_li_text_step5" class="steps-text"> <span>资料审核</span> </li>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td> <span>&nbsp;</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr style="height:1px;border:none;border-top:1px solid rgb(229,229,229);" />
+        <div id="logon" class="info-content help-content" style="display:none">
+            <table style="border:0px solid;text-align:center;width:98%">
+                <tr>
+                    <td style="height:20px"></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;width:12%"> </td>
+                    <td style="border:0px solid;vertical-align:top;width:68%">
+                        <div id="login" class="help-content">
+                            <table id="id_jianzhang" style="line-height:28px;width:520px">
+                                <tr>
+                                    <td style="padding:10px;font-size:24px;color:rgb(73,207,177);text-align:center">
+                                        <p> 《2017年报名须知》</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px;font-size:16px;color:rgb(158,158,158);">
+                                        <p> <span style="color:rgb(127,127,127)">一、 请仔细阅读《</span><span><a id="id_zj" target='_blank' href='hxzj.html' style="text-decoration:underline;color:#63B8FF;">2017年河西区幼儿园网上报名流程</a>》。</span><br/></p>
+                                        <p> <span style="color:rgb(127,127,127)">二、 请如实填写注册资料，所填资料与事实不符的，责任由幼儿父（母）或其他监护人承担。</span><br/></p>
+                                        <p> <span style="color:rgb(127,127,127)">三、每个账号在同一时间内使用一台设备进行登录操作，如违规操作引起的后果，责任由幼儿父（母）或其他监护人承担。</span><br/></p>
+                                        <p> <span style="color:rgb(127,127,127)">四、 请使用《2017年河西区幼儿园网上报名流程》中推荐的操作系统和浏览器，若使用非推荐的操作系统或浏览器，出现的任何问题，责任由幼儿父（母）或其他监护人承担。</span><br/></p>
+                                        <p> <span style="color:rgb(127,127,127)">五、实名注册成功后，请妥善保管登录密码等相关信息，以备网上报名阶段使用。若因个人原因造成密码泄露，其后果由幼儿父（母）或其他监护人承担。</span><br/></p>
+                                        <p> <span style="color:rgb(127,127,127)">六、因幼儿资格审核不符、提供虚假资料或在规定时间未前往幼儿园参加审核的，取消录取资格，责任由幼儿父（母）或其他监护人承担。</span><br/></p>
+                                        <p> <span style="color:rgb(127,127,127)">七、 本次幼儿园招生工作全程均在人大代表，政协委员，纪检委员的监督下进行，确保招生工作的公平公正公开。</span><br/></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td style="width:10%"> </td>
+                    <td style="">
+                        <div id="login" class="info-content logon-content">
+                            <table style="margin-left:8%;line-height:10px;">
+                                <tr>
+                                    <td style="height:28px;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h2 style="text-align:left;width:120px;font-size:20px;font-weight:inherit;font-family:inherit"> 用户登录</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:30px"></td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align:left"> <label class="ui-label"> 手机号:</label> </th>
+                                </tr>
+                                <tr>
+                                    <td> <input type="text" id="id_mobile" class="ui-text" value="" maxlength="11" /> </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:10px"></td>
+                                    <tr>
+                                        <th style="text-align:left"> <label class="ui-label"> 密码: </label> </th>
+                                    </tr>
+                                    <tr>
+                                        <td> <input type="password" id="id_password" class="ui-text" value=""> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height:32px"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align:left"> <button id="btn_submit" class="ui-btn ui-shadow" style="width:234px;"> 登录</button>&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height:2px"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="text-align:left"> <a id="a_forgetpassword" style="font-size:14px;text-decoration:underline;color:#63B8FF;">重置密码</a> <span id="id_register_msg" style="margin-left:20%">还没账号?</span> <a id="btn_register" style="font-size:20px;text-decoration:underline;color:#63B8FF;">立即注册</a>                                            </td>
+                                    </tr>
+                                    <tr style="height:6px">
+                                        <td> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> </td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td style="width:6%"> </td>
+                    </tr>
+            </table>
+        </div>
+        <div id="id_footer_div" style="position:relative;height:94px;line-height:20px;background-color:rgb(246,246,246);width:100%;display:none">
+            <hr style="height:1px;border:none;border-top:1px solid rgb(229,229,229);" />
+            <table style="border:2px;text-align:center;width:100%;line-height:20px;padding-top:20px">
+                <tr>
+                    <td><span style="text-align:center">河西区幼儿园网上报名系统</span></td>
+                </tr>
+                <tr>
+                    <td> <span style="text-align:center">©2017 津ICP证11000612号&nbsp;&nbsp;|&nbsp;&nbsp;津教备0526号</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var var_v = true;
+        $(function() {
+            $('#id_title_name').html('用户登录');
+            $('#id_title_img').attr("src", './images/logo.png');
+            $('#id_footer_div').css('top', '230px');
+            var jsUrl = './js/timer.js?v=' + new Date().getTime();
+            $.getScript(jsUrl, function() {
+                try {
+                    cL();
+                    setTestCookie("rms_test", "test1q2w3e4r5t~!");
+                    if (jq("rms_test") !== 'test1q2w3e4r5t~!') {
+                        aV("检测到您的浏览器没有开启或接收Cookie！请尝试开启后，重新进入。");
+                        return false;
+                    }
+                    T("rms_action", "");
+                    T("rms_mobile", "");
+                    var var_c = ['id_mobile', 'id_password'];
+                    for (var i = 0; i < var_c.length; i++) {
+                        setCtrlId(var_c[i]);
+                    }
+                    $('#btn_submit').off('click').on('click', function() {
+                        dH();
+                    });
+                    var url = bw('/ws/conf/');
+                    $.ajax({
+                        type: "GET",
+                        data: {},
+                        url: url,
+                        dataType: "jsonp",
+                        jsonp: 'callback',
+                        timeout: inerfaceTimeOut * 1000,
+                        cache: false,
+                        success: function(json) {
+                            if (json['errcode'] === 0) {
+                                var var_pppp = 0;
+                                var var_y = 0;
+                                var var_bI = 0;
+                                var var_av = 0;
+                                var timestamp = 0;
+                                switch (json['data']['type']) {
+                                    case 'register':
+                                        var beginTime = json['data']['begin'];
+                                        var_pppp = new Date(beginTime).getTime();
+                                        var endTime = json['data']['end'];
+                                        timestamp = json['data']['time'];
+                                        var_y = new Date(endTime).getTime();
+                                        T("rms_register_starttime", var_pppp);
+                                        T("rms_register_endtime", var_y);
+                                        T("rms_open_time", var_bI);
+                                        T("rms_close_time", var_av);
+                                        break;
+                                    case 'signup':
+                                        var beginTime = json['data']['begin'];
+                                        var endTime = json['data']['end'];
+                                        timestamp = json['data']['time'];
+                                        var_bI = new Date(beginTime).getTime();
+                                        var_av = endTime;
+                                        T("rms_register_starttime", var_pppp);
+                                        T("rms_register_endtime", var_y);
+                                        T("rms_open_time", var_bI);
+                                        T("rms_close_time", var_av);
+                                        break;
+                                }
+                                var dateObj = timestamp;
+                                T("rms_heatbeat_adjust", dateObj - new Date().getTime());
+                                var intervalBegin = -1;
+                                var intervalEnd = 1;
+                                if (var_pppp !== 0) {
+                                    intervalBegin = var_pppp - dateObj;
+                                }
+                                if (var_y !== 0) {
+                                    intervalEnd = dateObj - var_y;
+                                }
+                                if (intervalBegin >= 0) {
+                                    $('#top').show();
+                                    fM();
+                                    $('#logon').show();
+                                    $('#id_footer_div').show();
+                                    setTimeout(ikk, intervalBegin);
+                                    if (intervalEnd < 0) {
+                                        setTimeout(fM, 0 - intervalEnd);
+                                    }
+                                    return true;
+                                }
+                                if (intervalEnd < 0) {
+                                    $('#top').show();
+                                    var ctrl_id = 'id_password';
+                                    $('#' + ctrl_id).val('');
+                                    var ctrl_id = 'id_mobile';
+                                    $('#' + ctrl_id).val('');
+                                    $('#logon').show();
+                                    $('#' + ctrl_id).focus();
+                                    $('#id_footer_div').show();
+                                    setTimeout(fM, 0 - intervalEnd);
+                                    return true;
+                                }
+                                setTimeout(fM, 0);
+                                $('#top').show();
+                                var ctrl_id = 'id_password';
+                                $('#' + ctrl_id).val('');
+                                var ctrl_id = 'id_mobile';
+                                $('#' + ctrl_id).val('');
+                                $('#logon').show();
+                                $('#' + ctrl_id).focus();
+                                $('#id_footer_div').show();
+                                return true;
+                            }
+                            return false;
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            var errmsg = "您的操作系统不支持该证书，请更换机器";
+                            if ((textStatus !== null) && (textStatus !== '')) {
+                                errmsg = "网络繁忙，请稍后再试";
+                            }
+                            aV(errmsg);
+                            return false;
+                        }
+                    });
+                } catch (e) {
+                    aV("您的操作系统不支持该证书，请更换机器");
+                    return false;
+                }
+            });
+        });
+        $(document).ready(function() {
+            $(document).bind("contextmenu", function(e) {
+                return false;
+            });
+        });
+
+        function ikk() {
+            $('#top').show();
+            $('#logon').show();
+            $('#id_register_msg').show();
+            $('#btn_register').show();
+        };
+
+        function fM() {
+            $('#id_register_msg').hide();
+            $('#btn_register').hide();
+        };
+
+        function dH() {
+            var submitctrl_id = 'btn_submit';
+            if (var_v === false) {
+                return false;
+            }
+            var ctrl_id = '#id_mobile';
+            var mobile = $(ctrl_id).val().replace(/(^\s*)|(\s*$)/g, "");
+            if ((mobile === "") || (mobile.length !== 11) || isNaN(mobile)) {
+                aV("请输入11位的手机号码");
+                $(ctrl_id).focus();
+                return false;
+            }
+            var ctrl_id = '#id_password';
+            var password = $(ctrl_id).val();
+            if ((password.length < 6) || (password.length > 20)) {
+                aV("密码必须是6-20位字符");
+                $(ctrl_id).focus();
+                return false;
+            }
+            var_v = false;
+            $(submitctrl_id).html('正在登录...');
+            $(submitctrl_id).prop("disabled", "disabled");
+            var url = bw('/ws/conf/');
+            $.ajax({
+                type: "GET",
+                data: {},
+                url: url,
+                dataType: "jsonp",
+                jsonp: 'callback',
+                timeout: inerfaceTimeOut * 1000,
+                cache: false,
+                success: function(json) {
+                    if (json['errcode'] === 0) {
+                        var var_pppp = 0;
+                        var var_y = 0;
+                        var var_bI = 0;
+                        var var_av = 0;
+                        var beginTime = json['data']['begin'];
+                        var endTime = json['data']['end'];
+                        switch (json['data']['type']) {
+                            case 'register':
+                                var_pppp = new Date(beginTime).getTime();
+                                var_y = new Date(endTime).getTime();
+                                break;
+                            case 'signup':
+                                var_bI = new Date(beginTime).getTime();
+                                var_av = new Date(endTime).getTime();
+                                break;
+                        }
+                        T("rms_open_time", var_bI);
+                        T("rms_close_time", var_av);
+                        T("rms_register_starttime", var_pppp);
+                        T("rms_register_endtime", var_y);
+                        var url = bw('/ws/logon/in/');
+                        $.ajax({
+                            type: "GET",
+                            data: {
+                                'mobile': mobile,
+                                'pwd': password
+                            },
+                            url: url,
+                            timeout: inerfaceTimeOut * 1000,
+                            dataType: "jsonp",
+                            jsonp: 'callback',
+                            cache: false,
+                            success: function(json) {
+                                if (json['errcode'] === 0) {
+                                    var var_cW = parseInt(R("rms_register_starttime"));
+                                    var var_y = parseInt(R("rms_register_endtime"));
+                                    var var_bI = parseInt(R("rms_open_time"));
+                                    var var_av = parseInt(R("rms_close_time"));
+                                    var dateObj = json['data']['time'];
+                                    T("rms_heatbeat_adjust", dateObj - new Date().getTime());
+                                    var intervalStart = -1;
+                                    var intervalEnd = 1;
+                                    if (var_y !== 0) {
+                                        intervalEnd = dateObj - var_y;
+                                    }
+                                    if (var_cW !== 0) {
+                                        intervalStart = dateObj - var_cW;
+                                    }
+                                    jo();
+                                    T("rms_mobile", mobile);
+                                    T("rms_idcard", json['data']['idcard']);
+                                    T("rms_name", json['data']['name']);
+                                    if (((intervalStart <= 0) || (intervalEnd >= 0)) && (var_bI === 0)) {
+                                        T("rms_action", "verifyview");
+                                        fdd(json['data']);
+                                        $(submitctrl_id).removeAttr("disabled");
+                                        var_v = true;
+                                        window.location.href = "register/verifymodify.html";
+                                        return true;
+                                    }
+                                    if ((intervalEnd < 0) && (intervalStart > 0)) {
+                                        T("rms_action", "verifymodify");
+                                        fdd(json['data']);
+                                        $(submitctrl_id).removeAttr("disabled");
+                                        var_v = true;
+                                        window.location.href = "register/verifymodify.html";
+                                        return true;
+                                    }
+                                    if ((cV(dateObj, var_bI) && (intervalEnd >= 0)) || ((intervalStart >= 0) && (intervalEnd >= 0) && (dateObj <= var_bI))) {
+                                        T("rms_action", "verifyview");
+                                        fdd(json['data']);
+                                        $(submitctrl_id).removeAttr("disabled");
+                                        var_v = true;
+                                        window.location.href = "register/verifymodify.html";
+                                        return true;
+                                    }
+                                    if (ii(dateObj, var_av)) {
+                                        T("rms_action", "register_over");
+                                        $(submitctrl_id).removeAttr("disabled");
+                                        window.location.href = "signup/register.html";
+                                        return true;
+                                    }
+                                    T("rms_action", "register");
+                                    $(submitctrl_id).removeAttr("disabled");
+                                    var_v = true;
+                                    window.location.href = "signup/countdown.html";
+                                    return true;
+                                }
+                                $(submitctrl_id).html('登录');
+                                bp(json['errcode'], json['errmsg']);
+                                $(submitctrl_id).removeAttr("disabled");
+                                var_v = true;
+                                return true;
+                            },
+                            error: function() {
+                                $(submitctrl_id).html('登录');
+                                aV("网络繁忙，请稍后再试");
+                                $(submitctrl_id).removeAttr("disabled");
+                                var_v = true;
+                            }
+                        });
+                    }
+                },
+                error: function() {
+                    $(submitctrl_id).html('登录');
+                    aV("网络繁忙，请稍后再试");
+                    $(submitctrl_id).removeAttr("disabled");
+                    var_v = true;
+                }
+            });
+        };
+        $("#a_forgetpassword").click(function() {
+            T("rms_action", "forgetpassword");
+            window.location.href = "resetpwd.html";
+            return false;
+        });
+        $("#btn_register").click(function() {
+            T("rms_action", "verifyregister");
+            window.location.href = "register/verifyregister.html";
+            return true;
+        });
+
+        function setCtrlId(ctrl_id) {
+            if (ctrl_id === 'id_password') {
+                $('#' + 　ctrl_id).bind("keypress", function(e) {
+                    var key = e.which;
+                    if (key === 13) {
+                        dH();
+                        return false;
+                    }
+                });
+                return true;
+            }
+            $('#' + ctrl_id).bind("keypress", function(e) {
+                var key = e.which;
+                if (key === 13) {
+                    return false;
+                }
+            });
+            return true;
+        };
+
+        function cV(curTime, openTime) {
+            var cV = true;
+            if (openTime === 0) {
+                return cV;
+            }
+            var var_akk = new Date();
+            var_akk.setTime(openTime);
+            if ((new Date(curTime).getYear() === new Date(var_akk).getYear()) && (new Date(curTime).getMonth() === new Date(var_akk).getMonth()) && (new Date(curTime).getDate() === new Date(var_akk).getDate())) {
+                cV = false;
+                return cV;
+            }
+            if (new Date(curTime).getTime() >= openTime) {
+                cV = false;
+                return cV;
+            }
+            return cV;
+        };
+
+        function ii(curTime, closeTime) {
+            var var_K = false;
+            if (closeTime === 0) {
+                return var_K;
+            }
+            if (new Date(curTime).getTime() >= closeTime) {
+                var_K = true;
+                return var_K;
+            }
+            return var_K;
+        };
+
+        function jo() {
+            T("id_sel_kinggarden", "");
+            T("id_verify_code", '');
+            T("rms_idcard", "");
+        };
+
+        function fdd(data) {
+            var var_dee = ['residence', 'name', 'vcn', 'time', 'garden'];
+            for (var i = 0; i < var_dee.length; i++) {
+                var item = var_dee[i];
+                var value = data[item];
+                T("rms_" + item, value);
+            }
+        };
+
+        function dc() {
+            window.location.href = "./index.html";
+        }
+    </script>
+</body>
+
+</html>
